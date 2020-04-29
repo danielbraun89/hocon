@@ -2,7 +2,7 @@ from typing import Any, TextIO, AnyStr, Dict
 from pyhocon import ConfigFactory, HOCONConverter
 import json
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 
 def dump(obj: Any, fp: TextIO, **kwargs):
