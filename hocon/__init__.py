@@ -5,12 +5,12 @@ import json
 __version__ = "0.0.1"
 
 
-def dump(obj: Any, fp: TextIO):
-    json.dump(dumps(obj), fp)
+def dump(obj: Any, fp: TextIO, **kwargs):
+    json.dump(dumps(obj), fp, **kwargs)
 
 
-def dumps(obj: Any) -> str:
-    return HOCONConverter.to_json(obj)
+def dumps(obj: Any, **kwargs) -> str:
+    return HOCONConverter.to_json(obj, **kwargs)
 
 
 def load(fp: TextIO) -> Dict[str, Any]:
