@@ -1,16 +1,12 @@
 from typing import Any, TextIO, AnyStr, Dict
 from pyhocon import ConfigFactory, HOCONConverter
 import json
+from hocon import encoder
 
 __version__ = "0.0.2"
 
-
-def dump(obj: Any, fp: TextIO, **kwargs):
-    json.dump(dumps(obj), fp, **kwargs)
-
-
-def dumps(obj: Any, **kwargs) -> str:
-    return HOCONConverter.to_json(obj, **kwargs)
+dump = encoder.dump
+dumps = encoder.dumps
 
 
 def load(fp: TextIO) -> Dict[str, Any]:
