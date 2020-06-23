@@ -18,7 +18,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=['pyhocon>=0.3.54'],
+    install_requires=['pyhocon>=0.3.55'],
     setup_requires=['setuptools_scm', "wheel"],
     extras_require={
         "dev": ["mypy", "pytest", 'pylint', "twine", "bump2version"],
