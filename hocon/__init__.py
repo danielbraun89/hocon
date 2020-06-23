@@ -1,7 +1,7 @@
 from hocon import decoder
 from hocon import encoder
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 dump = encoder.dump
 dumps = encoder.dumps
