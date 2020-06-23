@@ -3,7 +3,7 @@ from pyhocon import ConfigFactory, HOCONConverter
 import json
 from hocon import encoder
 
-__version__ = "0.0.2"
+__version__ = "0.1.0"
 
 dump = encoder.dump
 dumps = encoder.dumps
