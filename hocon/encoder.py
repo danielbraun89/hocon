@@ -1,7 +1,7 @@
 import json
-from typing import Any, TextIO, AnyStr, Dict
+from typing import Any, TextIO
 
-from pyhocon import ConfigFactory, HOCONConverter
+from pyhocon import HOCONConverter
 
 
 def dump(obj: Any, fp: TextIO, **kwargs):
@@ -10,4 +10,3 @@ def dump(obj: Any, fp: TextIO, **kwargs):
 
 def dumps(obj: Any, **kwargs) -> str:
     return HOCONConverter.to_json(obj, **kwargs)
-
