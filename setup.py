@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="hocon",
-    version="0.0.2",
+    use_scm_version=True,
     author="Daniel Braun",
     author_email="danie.braun@outlook.co.il",
     description="HOCON encoder and decoder",
@@ -18,6 +18,10 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=['pyhocon>=0.3.54'],  # Optional
+    install_requires=['pyhocon>=0.3.54'],
+    setup_requires=['setuptools_scm', "wheel"],
+    extras_require={
+        "dev": ["mypy", "pytest", 'pylint', "twine", "bump2version"],
+    },
 )
 
